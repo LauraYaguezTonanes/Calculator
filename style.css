@@ -1,0 +1,185 @@
+body {
+  font-family: 'Spartan', sans-serif;
+  text-align: center;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #3a4764;
+}
+
+body header {
+  height: 5%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body header div .switch {
+  position: relative;
+  left: 62%;
+  display: inline-block;
+  width: 120px;
+  height: 34px;
+}
+
+body header div .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+body header div .slider {
+  position: absolute;
+  cursor: pointer;
+  color: #d03f2f;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #232c43;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body header div .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #d03f2f;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body header div input:checked + .slider {
+  background-color: #232c43;
+}
+
+body header div input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #b4a597;
+          box-shadow: 0 0 1px #b4a597;
+}
+
+body header div input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+body header div input:checked + .slider:after {
+  -webkit-transform: translateX(56px);
+  transform: translateX(56px);
+}
+
+body header div .slider.round {
+  border-radius: 34px;
+}
+
+body header div .slider.round:before {
+  border-radius: 50%;
+}
+
+body header div .slider.round:after {
+  border-radius: 50%;
+}
+
+body .Result {
+  height: 85px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  right: 5%;
+  background-color: #182034;
+  color: white;
+  font-size: 32px;
+  text-align: right;
+  margin: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .Result p {
+  margin-right: 25px;
+}
+
+body .NumberPad {
+  padding: 20px;
+  height: 80%;
+  width: 100%;
+  background-color: #232c43;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+  -ms-grid-columns: (1fr)[4];
+      grid-template: repeat(5, 1fr)/repeat(4, 1fr);
+  gap: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 32px;
+}
+
+body .NumberPad a {
+  background-color: #eae3dc;
+  color: #444b5a;
+  height: auto;
+  width: auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-radius: 10%;
+  border-bottom: 4px solid #b4a597;
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+body .NumberPad .Del {
+  background-color: #637097;
+  color: white;
+  border-bottom: 4px solid #404e72;
+  font-size: 16px;
+  padding-top: 23px;
+}
+
+body .NumberPad .Reset {
+  background-color: #637097;
+  color: white;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  border-bottom: 4px solid #404e72;
+  font-size: 16px;
+  padding-top: 23px;
+  border-radius: 7%;
+}
+
+body .NumberPad .Equal {
+  background-color: #d03f2f;
+  color: white;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  font-size: 16px;
+  padding-top: 23px;
+  border-radius: 7%;
+  border-bottom: 4px solid #93261a;
+}
+/*# sourceMappingURL=style.css.map */
